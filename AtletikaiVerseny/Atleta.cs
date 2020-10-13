@@ -17,10 +17,12 @@ namespace AtletikaiVerseny
         public Atleta(string sor)
         {
             string[] a = sor.Split(';');
+            string[] nev = sor.Split(' ');
             Rajtszam = a[0];
-            VezNev = a[1];
-            KerNev = a[2];
-            Egyesulet = a[3];
+            VezNev = nev[0];
+            KerNev = nev[1];
+            Egyesulet = a[1];
+            Ugras = Convert.ToInt32(a[2]);
 
             //string[] Nev = new string[] { };
             //Nev = VezNev + KerNev;
