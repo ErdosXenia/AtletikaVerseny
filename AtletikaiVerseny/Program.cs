@@ -10,6 +10,7 @@ namespace AtletikaiVerseny
     class Program
     {
         static List<Atleta> atletak = new List<Atleta>();
+        static Dictionary<string, int> feladat = new Dictionary<string, int>();
 
         static void feladat1()
         {
@@ -27,14 +28,49 @@ namespace AtletikaiVerseny
             Console.WriteLine("2. Feladat: Nevek és ugrások");
             foreach (var a in atletak)
             {
-                Console.WriteLine("{0,10} {1} {2,10}",a.VezNev,a.KerNev,a.Ugras);
+                Console.WriteLine("{0,10} {1,15}",a.Nev,a.Ugras);
             }
+        }
+
+        //static void feladat3()
+        //{
+        //    Console.WriteLine("\n3. Feladat: Egyesületek: ");
+        //    foreach (var a in atletak)
+        //    {
+        //        if (feladat.ContainsKey(a.Egyesulet))
+        //        {
+        //            feladat.Add(a.Egyesulet)++;
+        //        }
+        //    }
+        //}
+
+        static void feladat4()
+        {
+            Console.WriteLine("4. Feladat: Legnagyobb ugrás:");
+            int max = 0;
+            foreach (var a in atletak)
+            {
+                if (max > a.Ugras)
+                {
+                    max = a.Ugras;
+                }
+                Console.Write(a.Nev);
+                
+            }
+            Console.WriteLine($": {max}");
+        }
+
+        static void feladat5()
+        {
+
         }
 
         static void Main(string[] args)
         {
             feladat1();
             feladat2();
+            //feladat3();
+            feladat4();
 
             Console.ReadKey();
         }
