@@ -32,29 +32,30 @@ namespace AtletikaiVerseny
             }
         }
 
-        ////static void feladat3()
-        ////{
-        ////    Console.WriteLine("\n3. Feladat: Egyesületek: ");
-        ////    foreach (var a in atletak)
-        ////    {
-        ////        if (feladat.ContainsKey(a.Egyesulet))
-        ////        {
-        ////            feladat.Add(a.Egyesulet)++;
-        ////        }
-        ////    }
-        ////}
+        static void feladat3()
+        {
+            Console.WriteLine("\n3. Feladat: Egyesületek: ");
+            foreach (var a in atletak)
+            {
+                if (feladat.ContainsKey(a.Egyesulet));
+                {
+                    //feladat.Add(feladat.Values(a.Egyesulet));
+                }
+            }
+        }
 
         static void feladat4()
         {
-            Console.WriteLine("\n4. Feladat: Legnagyobb ugrás:");
+            Console.WriteLine("\n4. Feladat: Legnagyobb ugrás:"); 
             int max = 0;
             foreach (var a in atletak)
             {
                 if (max < a.Ugras)
                 {
                     max = a.Ugras;
+                    Console.Write("{0} {1}", a.VezNev, a.KerNev);
                 }
-                //Console.Write("{0} {1}",a.VezNev,a.KerNev);
+                
                 
             }
             Console.WriteLine($": {max}");
@@ -62,7 +63,7 @@ namespace AtletikaiVerseny
 
         static void feladat5()
         {
-            Console.Write("5. Feladat: Átlag alatt lévő ugrások száma: ");
+            Console.Write("\n5. Feladat: Átlag alatt lévő ugrások száma: ");
             int db = 0;
             int atlag = 0;
             foreach (var a in atletak)
@@ -76,7 +77,7 @@ namespace AtletikaiVerseny
 
         static void feladat6()
         {
-            Console.WriteLine("6. feladat: Adatok fájlba írása.");
+            Console.WriteLine("\n6. feladat: Adatok fájlba írása.");
             StreamWriter sw = new StreamWriter("versenyzok.txt");
             foreach (var a in atletak)
             {

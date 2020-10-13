@@ -19,15 +19,12 @@ namespace AtletikaiVerseny
         public Atleta(string sor)
         {
             string[] a = sor.Split(';');
-            //string[] b = nev.Split(' ');
             Rajtszam = a[0];
             VezNev = a[1];
             KerNev = a[2];
             Egyesulet = a[3];
             Ugras = int.Parse(a[4]);
 
-            //string[] Nev = new string[] { };
-            //Nev = VezNev + KerNev;
         }
 
 
