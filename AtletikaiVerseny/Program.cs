@@ -28,33 +28,33 @@ namespace AtletikaiVerseny
             Console.WriteLine("2. Feladat: Nevek és ugrások");
             foreach (var a in atletak)
             {
-                Console.WriteLine("{0,10} {1,15}",a.Nev,a.Ugras);
+                Console.WriteLine("{0,10} {1} {2,15}",a.VezNev,a.KerNev,a.Ugras);
             }
         }
 
-        //static void feladat3()
-        //{
-        //    Console.WriteLine("\n3. Feladat: Egyesületek: ");
-        //    foreach (var a in atletak)
-        //    {
-        //        if (feladat.ContainsKey(a.Egyesulet))
-        //        {
-        //            feladat.Add(a.Egyesulet)++;
-        //        }
-        //    }
-        //}
+        ////static void feladat3()
+        ////{
+        ////    Console.WriteLine("\n3. Feladat: Egyesületek: ");
+        ////    foreach (var a in atletak)
+        ////    {
+        ////        if (feladat.ContainsKey(a.Egyesulet))
+        ////        {
+        ////            feladat.Add(a.Egyesulet)++;
+        ////        }
+        ////    }
+        ////}
 
         static void feladat4()
         {
-            Console.WriteLine("4. Feladat: Legnagyobb ugrás:");
+            Console.WriteLine("\n4. Feladat: Legnagyobb ugrás:");
             int max = 0;
             foreach (var a in atletak)
             {
-                if (max > a.Ugras)
+                if (max < a.Ugras)
                 {
                     max = a.Ugras;
                 }
-                Console.Write(a.Nev);
+                //Console.Write("{0} {1}",a.VezNev,a.KerNev);
                 
             }
             Console.WriteLine($": {max}");
@@ -62,6 +62,15 @@ namespace AtletikaiVerseny
 
         static void feladat5()
         {
+            Console.Write("5. Feladat: Átlag alatt lévő ugrások száma: ");
+            int db = 0;
+            int atlag = 0;
+            foreach (var a in atletak)
+            {
+                db++;
+                atlag+=a.Ugras;
+            }
+            Console.WriteLine(atlag/db);
 
         }
 
@@ -71,6 +80,7 @@ namespace AtletikaiVerseny
             feladat2();
             //feladat3();
             feladat4();
+            feladat5();
 
             Console.ReadKey();
         }
